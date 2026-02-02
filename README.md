@@ -2,9 +2,10 @@
 
 > [!NOTE]  
 > This assumes you are using Arch with systemd.
+> 
 > No I will not use dinit, nor OpenRC, nor runit. 
 
-Install [yay]([https://](https://github.com/Jguer/yay))
+Install [yay](https://github.com/Jguer/yay)
 ```sh
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
@@ -14,7 +15,8 @@ makepkg -si
 
 Install dependencies
 ```sh
-yay -S i3-wm \
+yay -S --needed
+  i3-wm \
   i3-lock \
   flameshot \
   atuin \
@@ -26,11 +28,11 @@ yay -S i3-wm \
   polybar \
   obsidian \
   pcmanfm \
-  rofi
+  rofi \
   xorg-xset \
   xorg-xinit \
   firefox \
   pavucontrol \
   libnotify \
-  dunst \
+  dunst
 ```
