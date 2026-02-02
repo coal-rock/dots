@@ -57,7 +57,6 @@ if status --is-interactive
     alias i3conf="nvim ~/.config/i3/config"
     alias swconf="nvim ~/.config/sway/config"
     alias fconf="nvim ~/.config/fish/config.fish"
-    alias ssconf="nvim ~/.config/starship.toml"
     alias nvconf="nvim ~/.config/nvim/init.lua"
     alias conf="cd ~/.config"
 
