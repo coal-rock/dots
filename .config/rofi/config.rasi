@@ -1,0 +1,7 @@
+configuration {
+    display-run:    ">";
+    display-drun:   ">";
+    show-icons:     true;
+}
+
+@theme "~/.config/rofi/gruvbox.rasi"
