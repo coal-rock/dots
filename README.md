@@ -34,5 +34,9 @@ yay -S --needed
   firefox \
   pavucontrol \
   libnotify \
-  dunst
+  dunst \
+  bat \
+  exa \
+  playerctl \
+  picom 
 ```
