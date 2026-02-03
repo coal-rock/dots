@@ -58,6 +58,8 @@ if status --is-interactive
     alias swconf="nvim ~/.config/sway/config"
     alias fconf="nvim ~/.config/fish/config.fish"
     alias nvconf="nvim ~/.config/nvim/init.lua"
+    alias polyconf="nvim ~/.config/polybar/config.ini"
+    alias piconf="nvim ~/.config/picom/picom.conf"
     alias conf="cd ~/.config"
 
     # enable vsync
