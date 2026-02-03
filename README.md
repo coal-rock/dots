@@ -38,5 +38,7 @@ yay -S --needed
   bat \
   exa \
   playerctl \
-  picom 
+  picom \
+  gtk-engine-murrine \
+  gruvbox-gtk-theme-git
 ```
