@@ -73,8 +73,8 @@ bindsym XF86AudioMute               exec pamixer -t
 bindsym XF86MonBrightnessUp           exec sudo brightnessctl s 15+%
 bindsym XF86MonBrightnessDown         exec sudo brightnessctl s 15-%
 
-# i3lock
-bindsym $mod+control+l exec i3lock -i $locksreen
+# lock system
+bindsym $mod+control+l exec betterlockscreen -l dim
 
 # Change focus
 bindsym $mod+h focus left

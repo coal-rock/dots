@@ -17,7 +17,7 @@ Install dependencies
 ```sh
 yay -S --needed
   i3-wm \
-  i3-lock \
+  betterlockscreen \
   flameshot \
   atuin \
   fish \
@@ -46,5 +46,12 @@ yay -S --needed
 
 Enable login manager:
 ```sh
-systemctl enable ly@tty2.service
+sudo systemctl enable ly@tty2.service
 ```
+
+Enable lockscreen service:
+```
+betterlockscreen -u $BACKGROUND
+sudo systemctl enable betterlockscreen@$USER
+```
+
