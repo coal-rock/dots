@@ -49,6 +49,11 @@ Enable login manager:
 sudo systemctl enable ly@tty2.service
 ```
 
+Set default shell to fish:
+```
+chsh -s fish
+```
+
 Enable lockscreen service:
 ```
 betterlockscreen -u $BACKGROUND
