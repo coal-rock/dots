@@ -16,11 +16,7 @@ workspace 9 output DP-1-0.3
 workspace 10 output eDP-1
 
 # Enable window borders, hide default titlebar
-# # class                 border | backgr| text  | indicator | child_border
 client.focused          #458588 #458588 #458588 #458588
-# client.focused_inactive #333333 #5F676A #ffffff #484e50
-# client.unfocused        #333333 #424242 #888888 #292d2e 
-# client.urgent           #C10004 #900000 #ffffff #900000
 for_window [class="^.*"] border pixel 2
 
 # Gap config
@@ -152,7 +148,7 @@ exec_always --no-startup-id xmodmap ~/.Xresources
 exec_always --no-startup-id xset r rate 300 50
 
 # Long running daemon-type stuff:
-exec_always --no-startup-id sh -c "pkill polybar; polybar top; polybar bottom;"
+exec_always --no-startup-id sh -c "pkill polybar; ~/.config/polybar/launch.sh"
 exec_always --no-startup-id sh -c "pkill dunst; dunst"
 exec_always --no-startup-id sh -c "pkill flameshot; flameshot"
 exec_always --no-startup-id sh -c "pkill picom; picom"
