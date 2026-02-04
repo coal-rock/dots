@@ -31,14 +31,8 @@ if status --is-interactive
     alias cdo="cd ~/CDO"
     alias emu="cd ~/Emulation"
 
-    # scripts
-    function goon 
-        xrandr --output eDP-1 --primary --mode 2560x1600 --pos 1080x1080 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-1-0.2 --mode 1920x1080 --pos 0x126 --rotate left --output DP-1-0.3 --mode 1920x1080 --pos 2485x0 --rotate normal --output DP-1-0 --off --output DP-1-1 --off --output HDMI-1-0 --off --output DP-1-2 --off
-    end
-
-    function lap
-        xrandr --output eDP-1 --primary --mode 2560x1600 --pos 1080x1163 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-1-0.2 --off --output DP-1-0.3 --off --output DP-1-0 --off --output DP-1-1 --off --output HDMI-1-0 --off --output DP-1-2 --off
-    end
+    alias goon="~/.config/i3/goon.sh"
+    alias lap="~/.config/i3/lap.sh"
 
     function cheat
         curl cheat.sh/$argv[1]
@@ -52,6 +46,8 @@ if status --is-interactive
     alias paste="xclip -selection clipboard -o"
     alias cpath="pwd | copy"
 
+    alias nosleep="xset s off  -dpms"
+    alias yessleep="xset s on +dpms"
 
     # configs
     alias i3conf="nvim ~/.config/i3/config"

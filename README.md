@@ -40,5 +40,11 @@ yay -S --needed
   playerctl \
   picom \
   gtk-engine-murrine \
-  gruvbox-gtk-theme-git
+  gruvbox-gtk-theme-git \
+  ly
+```
+
+Enable login manager:
+```sh
+systemctl enable ly@tty2.service
 ```

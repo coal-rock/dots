@@ -138,6 +138,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+M move scratchpad
 bindsym $mod+Shift+M scratchpad show
 
+# Automatic monitor configuration
+exec ~/.config/i3/monitors.sh
+
 # Setup wallpaper
 exec_always feh --bg-fill $background
 
