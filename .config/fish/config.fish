@@ -42,6 +42,22 @@ if status --is-interactive
         cat $argv[1] | xclip -selection clipboard
     end
 
+    function scratch -a file_name
+        if test -z "$file_name"
+            echo "Usage: scratch FILE_NAME"
+            echo "Creates a scratch directory and a blank file named FILE_NAME, then spawns a new fish instance at the scratch directory."
+            return
+        end
+
+        set SCRATCH_PATH "/tmp/.scratch_$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13)"
+        mkdir $SCRATCH_PATH; touch "$SCRATCH_PATH/$file_name" 
+         
+        cd $SCRATCH_PATH
+        nvim $file_name
+    end
+
+    alias sc="scratch"
+
     alias copy="xclip -selection clipboard"
     alias paste="xclip -selection clipboard -o"
     alias cpath="pwd | copy"
