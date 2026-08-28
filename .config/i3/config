@@ -37,6 +37,12 @@ bindsym $mod+Return exec alacritty msg create-window
 # Start browser 
 bindsym $mod+w exec firefox 
 
+# Start Chrome
+bindsym $mod+Shift+w exec google-chrome-stable
+
+# Start file finder
+bindsym $mod+s exec fsearch
+
 # Start pavu
 bindsym $mod+a exec pavucontrol
 
@@ -47,7 +53,7 @@ bindsym $mod+d exec "rofi -show drun"
 bindsym $mod+Shift+d exec "rofi -show run"
 
 # Take screenshot
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+s exec "flameshot gui"
 
 # File manager 
 bindsym $mod+t exec pcmanfm
@@ -68,6 +74,11 @@ bindsym $mod+G exec notify-send -u critical -t 3000 "Active profile is $(supergf
 bindsym XF86AudioRaiseVolume        exec pamixer -i 5
 bindsym XF86AudioLowerVolume        exec pamixer -d 5
 bindsym XF86AudioMute               exec pamixer -t
+
+# Bind media playback keys to playerctl
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Enable functionality for brightness keys
 bindsym XF86MonBrightnessUp           exec sudo brightnessctl s 15+%
@@ -139,6 +150,7 @@ bindsym $mod+M move scratchpad
 bindsym $mod+Shift+M scratchpad show
 
 # Automatic monitor configuration
+# also handles selecting current layout for betterlockscreen
 exec ~/.config/i3/monitors.sh
 
 # Setup wallpaper
@@ -156,3 +168,6 @@ exec_always --no-startup-id sh -c "pkill dunst; dunst"
 exec_always --no-startup-id sh -c "pkill flameshot; flameshot"
 exec_always --no-startup-id sh -c "pkill picom; picom"
 exec_always --no-startup-id alacritty --daemon
+
+for_window [title="FSearch"] floating enable
+# for_window [class="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
